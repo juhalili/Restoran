@@ -1,0 +1,56 @@
+﻿@{
+    ViewBag.Title = "Welcome to Our Restaurant!";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/css/style.css"> <!-- Link to your external CSS -->
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Our Restaurant</h1>
+            <p>Delicious food, great service, and a cozy atmosphere.</p>
+            <a href="#menu" class="btn">View Our Menu</a>
+        </div>
+    </section>
+
+    <!-- Featured Menu Section -->
+    <section id="menu" class="menu">
+        <h2>Our Specialties</h2>
+        <div class="menu-items">
+            <div class="menu-item">
+                <img src="~/images/taco.jpg" alt="Beef Taco">
+                <h3>Beef Taco</h3>
+                <p>Our signature beef taco, served with fresh ingredients.</p>
+                <span>$5.99</span>
+            </div>
+            <div class="menu-item">
+                <img src="~/images/chicken-taco.jpg" alt="Chicken Taco">
+                <h3>Chicken Taco</h3>
+                <p>A tasty chicken taco, grilled to perfection.</p>
+                <span>$4.99</span>
+            </div>
+            <!-- Add more menu items here -->
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Get in Touch</h2>
+        <p>We'd love to hear from you. Visit us or contact us for more information.</p>
+        <address>
+            <p><strong>Address:</strong> 123 Restaurant St, Food City</p>
+            <p><strong>Email:</strong> info@restaurant.com</p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+        </address>
+    </section>
+
+</body>
+</html>

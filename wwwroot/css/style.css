@@ -1,0 +1,112 @@
+/* General Body and Layout Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Hero Section */
+.hero {
+    background-image: url('~/images/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    background-color: #ff6347;
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+}
+
+    .hero .btn:hover {
+        background-color: #e5533b;
+    }
+
+/* Menu Section */
+.menu {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+    .menu h2 {
+        font-size: 2.5rem;
+        margin-bottom: 40px;
+    }
+
+.menu-items {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.menu-item {
+    background-color: white;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 250px;
+    text-align: center;
+}
+
+    .menu-item img {
+        width: 100%;
+        height: auto;
+        border-radius: 5px;
+    }
+
+    .menu-item h3 {
+        font-size: 1.8rem;
+        margin-top: 15px;
+    }
+
+    .menu-item p {
+        font-size: 1rem;
+        color: #777;
+    }
+
+    .menu-item span {
+        display: block;
+        margin-top: 10px;
+        font-size: 1.2rem;
+        color: #ff6347;
+    }
+
+/* Contact Section */
+.contact {
+    background-color: #fff;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+    .contact h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+
+    .contact address {
+        font-size: 1.2rem;
+        color: #333;
+    }
+
+        .contact address p {
+            margin-bottom: 10px;
+        }
