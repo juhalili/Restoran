@@ -1,34 +1,43 @@
 ﻿@model IEnumerable<Ingredient>
 
-    @{
-        ViewBag.Title = "List of Restaurant Ingredients";
-    }
+@{
+    ViewBag.Title = "List of Restaurant Ingredients";
+}
 
-<h1>Ingredients</h1>
-<a asp-action="Create">Create New Ingredient</a>
+<div class="container mt-4">
+    <h1 class="mb-3">Ingredients</h1>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Name)
-            </th>
-            <th></th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach(Ingredient i in Model)
-        {
-            <tr>
-                <td>
-                    @Html.DisplayFor(modelItem => i.Name)
-                </td>
-                <td>
-                    <a asp-action="Details" asp-route-id="@i.IngredientId">Details</a>
-                    <a asp-action="Edit" asp-route-id="@i.IngredientId">Edit</a>
-                    <a asp-action="Delete" asp-route-id="@i.IngredientId">Delete</a>
-                </td>
-            </tr>
-        }
-    </tbody>
-</table>
+    <a asp-action="Create" class="btn btn-primary mb-3">
+        <i class="fas fa-plus"></i> Create New Ingredient
+    </a>
+
+    <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+            <thead class="table-dark">
+                <tr>
+                    <th>@Html.DisplayNameFor(model => model.Name)</th>
+                    <th class="text-center">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var i in Model)
+                {
+                    <tr>
+                        <td>@Html.DisplayFor(modelItem => i.Name)</td>
+                        <td class="text-center">
+                            <a asp-action="Details" asp-route-id="@i.IngredientId" class="btn btn-info btn-sm">
+                                <i class="fas fa-eye"></i> Details
+                            </a>
+                            <a asp-action="Edit" asp-route-id="@i.IngredientId" class="btn btn-warning btn-sm">
+                                <i class="fas fa-edit"></i> Edit
+                            </a>
+                            <a asp-action="Delete" asp-route-id="@i.IngredientId" class="btn btn-danger btn-sm">
+                                <i class="fas fa-trash"></i> Delete
+                            </a>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

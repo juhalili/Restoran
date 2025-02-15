@@ -1,17 +1,28 @@
 ﻿@model Ingredient
+
 @{
     ViewBag.Title = "Create Ingredient";
 }
-<div class="row">
-    <div class="col-md-4">
-    <form asp-action="Create" method="post">
-        <div class="form-group">
-            <label asp-for="Name"></label>
-            <input asp-for="Name" class="form-control" />
-            <span asp-validation-for="Name" class="text-danger"></span>
-        </div>
-        <button type="submit" class="btn btn-primary">Create</button>
-        <a asp-action="Index" class="btn btn-secondary">Back to List</a>
-    </form>
+
+<div class="container mt-4">
+    <h1 class="mb-4 text-primary"><i class="fas fa-plus-circle"></i> Create New Ingredient</h1>
+
+    <div class="card shadow-lg p-4">
+        <form asp-action="Create" method="post">
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label fw-bold">Ingredient Name</label>
+                <input asp-for="Name" class="form-control" placeholder="Enter ingredient name" />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="mt-4">
+                <button type="submit" class="btn btn-success">
+                    <i class="fas fa-check-circle"></i> Create
+                </button>
+                <a asp-action="Index" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Back to List
+                </a>
+            </div>
+        </form>
     </div>
 </div>
