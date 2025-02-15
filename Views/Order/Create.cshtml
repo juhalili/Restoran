@@ -1,26 +1,38 @@
 ﻿@model OrderViewModel
 
 @{
-        ViewBag.Title = "Create Order";
+    ViewBag.Title = "Create Order";
 }
 
-<h1>Create Order</h1>
+<div class="container mt-4">
+    <!-- Page Title -->
+    <h2 class="mb-4 text-dark"><i class="fas fa-shopping-cart"></i> Create Order</h2>
 
-<div class="row">
-    @foreach (Product product in @Model.Products)
-    {
-        <div class="col-md-4">
-            <form asp-action="AddItem" method="post">
-                <div class="card" style="width: 18rem;">
-                    <img src="@Url.Content("~/images/" + product?.ImageUrl)" class="card-img-top fixed-image-height" alt="@product.Description">
-                    <div class="card-body">
-                        @product.Name - @product.Price.ToString("C")
-                        <input type="hidden" value="@product.ProductId" name="prodId" />
-                        <input type="number" name="prodQty" class="form-control" />
-                        <button class="btn btn-info" type="submit">Add</button>
+    <div class="row">
+        @foreach (Product product in Model.Products)
+        {
+            <div class="col-md-4 mb-4">
+                <form asp-action="AddItem" method="post">
+                    <div class="card shadow-sm" style="width: 18rem;">
+                        <img src="@Url.Content("~/images/" + product?.ImageUrl)" class="card-img-top fixed-image-height" alt="@product.Description">
+                        <div class="card-body">
+                            <h5 class="card-title text-center">@product.Name</h5>
+                            <p class="card-text text-success">@product.Price.ToString("C")</p>
+
+                            <!-- Quantity Input -->
+                            <input type="hidden" value="@product.ProductId" name="prodId" />
+                            <div class="mb-2">
+                                <input type="number" name="prodQty" class="form-control" min="1" placeholder="Quantity" required />
+                            </div>
+
+                            <!-- Add to Order Button -->
+                            <button class="btn btn-primary w-100" type="submit">
+                                <i class="fas fa-plus-circle"></i> Add to Order
+                            </button>
+                        </div>
                     </div>
-                </div>
-            </form>
-        </div>
-    }
+                </form>
+            </div>
+        }
+    </div>
 </div>

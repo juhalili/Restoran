@@ -2,55 +2,128 @@
     ViewBag.Title = "Welcome to Our Restaurant!";
 }
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title</title>
-    <link rel="stylesheet" href="~/css/style.css"> <!-- Link to your external CSS -->
-</head>
-<body>
-
+<div class="container mt-4">
     <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-content">
-            <h1>Welcome to Our Restaurant</h1>
-            <p>Delicious food, great service, and a cozy atmosphere.</p>
-            <a href="#menu" class="btn">View Our Menu</a>
+    <section class="hero text-center py-5 bg-light rounded shadow">
+        <div class="container">
+            <h1 class="display-4 text-dark fw-bold">Welcome to Our Restaurant</h1>
+            <p class="lead text-muted">Delicious food, great service, and a cozy atmosphere.</p>
+
+            <pre style="font-family: monospace; white-space: pre-wrap; word-wrap: break-word;">
+
+                                                          
+              ██████      ██      ▓▓              
+            ██░░    ██  ██░░        ██            
+          ██░░░░░░    ██  ░░░░░░      ██          
+    ██████░░░░░░░░░░  ░░░░░░░░░░░░░░  ██          
+  ██      ░░░░░░░░░░  ░░  ░░░░░░░░      ████████  
+██    ░░  ░░░░████████████████░░██      ░░      ██
+██░░░░░░░░░░██░░░░░░░░░░░░░░░░██░░░░██░░░░░░░░  ██
+  ▓▓░░░░░░██░░░░░░░░░░░░  ░░░░  ░░░░░░██░░░░░░██  
+    ██  ██░░░░░░░░░░░░░░    ░░░░░░░░░░  ██░░██    
+    ████░░░░░░░░░░░░░░  ██    ░░░░░░    ██░░░░██  
+    ██░░░░░░░░░░░░░░░░░░██    ░░░░  ░░  ██░░░░  ██
+    ██░░░░░░░░██░░░░░░░░██    ░░██░░    ██░░░░  ██
+    ██░░░░██████████████████████████    ████████  
+    ██░░██████████▒▒▒▒▒▒░░░░░░░░██████  ██        
+    ██▓▓████████░░▒▒░░░░░░░░░░░░  ████████        
+    ██████▓▓██░░████▒▒░░░░░░████    ██████        
+    ████████░░██░░░░░░░░░░░░░░░░██░░  ████▓▓      
+    ██████░░▒▒░░░░░░░░░░░░░░░░░░    ░░██████      
+  ██░░████▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░████  ██    
+  ██░░████░░▒▒░░  ██░░░░░░░░  ██░░    ████░░██    
+  ██▒▒████░░▒▒░░████░░░░░░░░████░░░░░░████▒▒██    
+    ██████▒▒░░░░▒▒░░░░░░░░░░░░░░░░░░░░██████      
+  ░░  ████▒▒▒▒▒▒░░░░░░░░░░░░░░░░░░░░░░████        
+    ░░██████▒▒▒▒▒▒░░░░████░░░░░░  ░░██████        
+        ▓▓  ██░░▒▒░░░░░░░░░░░░    ██  ██          
+              ████▒▒▒▒▒▒░░░░  ████                
+                ██▓▓████████████                  
+            ████░░██▒▒░░░░██    ████              
+            ██░░  ░░████████      ██              
+          ██    ░░░░░░░░░░░░██░░  ▓▓██            
+        ▓▓      ░░░░██░░██░░██░░    ░░██          
+        ██░░░░██░░░░░░░░░░░░██░░██░░  ██          
+        ██░░░░██░░░░░░░░░░░░██░░██░░  ██          
+        ██  ░░██░░░░██░░██░░██░░██░░  ██          
+        ██  ░░██░░░░░░░░░░░░██░░██░░░░██          
+        ████████░░░░░░░░░░░░██░░████████          
+        ██  ░░████████████████████▒▒  ██          
+        ██░░░░██░░████████▓▓██░░██▒▒░░██          
+          ████  ░░██████▓▓▓▓██░░░░████            
+            ██░░░░████▓▓▓▓▓▓██░░  ██              
+            ██░░░░██████▓▓████░░  ██              
+            ██░░░░░░████████░░░░  ██              
+            ██  ░░  ██    ██░░    ██              
+            ██      ██    ██░░░░  ██              
+            ██░░    ██    ██░░░░  ██              
+            ██████████    ██████████              
+              ▓▓████        ▓▓████                
+
+
+             </pre>
+        </div>
+    </section>
+            
         </div>
     </section>
 
     <!-- Featured Menu Section -->
-    <section id="menu" class="menu">
-        <h2>Our Specialties</h2>
-        <div class="menu-items">
-            <div class="menu-item">
-                <img src="~/images/taco.jpg" alt="Beef Taco">
-                <h3>Beef Taco</h3>
-                <p>Our signature beef taco, served with fresh ingredients.</p>
-                <span>$5.99</span>
-            </div>
-            <div class="menu-item">
-                <img src="~/images/chicken-taco.jpg" alt="Chicken Taco">
-                <h3>Chicken Taco</h3>
-                <p>A tasty chicken taco, grilled to perfection.</p>
-                <span>$4.99</span>
-            </div>
-            <!-- Add more menu items here -->
+<!--
+    <section id="menu" class="mt-5">
+        <h2 class="text-center text-dark"><i class="fas fa-star"></i> Our Specialties</h2>
+        <div class="row mt-4">
+    @if (ViewBag.FeaturedProducts != null && ((List<Product>)ViewBag.FeaturedProducts).Any())
+    {
+        foreach (var product in (List<Product>)ViewBag.FeaturedProducts)
+        {
+                            <div class="col-md-4 mb-4">
+                                <div class="card shadow-sm h-100">
+                                    <img src="@Url.Content("~/images/" + (product?.ImageUrl ?? "default.jpg"))" class="card-img-top fixed-image-height" alt="@product.Description">
+                                    <div class="card-body d-flex flex-column">
+                                        <h5 class="card-title text-center">@product.Name</h5>
+                                        <p class="card-text">@product.Description</p>
+                                        <p class="card-text text-success fw-bold">@product.Price.ToString("C")</p>
+
+                                        <!-- Order Now Button -->
+        <div class="mt-auto text-center">
+            <a class="btn btn-primary btn-sm" asp-controller="Order" asp-action="Create">
+                <i class="fas fa-shopping-cart"></i> Order Now
+            </a>
+        </div>
+                                    </div>
+                                </div>
+                            </div>
+        }
+    }
+    else
+    {
+    <p class="text-center text-muted">No featured products available.</p>
+    }
         </div>
     </section>
+-->
+
+    
 
     <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <h2>Get in Touch</h2>
-        <p>We'd love to hear from you. Visit us or contact us for more information.</p>
-        <address>
-            <p><strong>Address:</strong> 123 Restaurant St, Food City</p>
-            <p><strong>Email:</strong> info@restaurant.com</p>
-            <p><strong>Phone:</strong> (123) 456-7890</p>
+    <section id="contact" class="mt-5 py-4 bg-light text-center rounded shadow">
+        <h2 class="text-dark"><i class="fas fa-phone"></i> Get in Touch</h2>
+        <p class="text-muted">We'd love to hear from you. Visit us or contact us for more information.</p>
+        <address class="fw-bold">
+            <p><i class="fas fa-map-marker-alt"></i> 123 Restaurant St, Food City</p>
+            <p><i class="fas fa-envelope"></i> info@restaurant.com</p>
+            <p><i class="fas fa-phone"></i> (123) 456-7890</p>
         </address>
     </section>
 
-</body>
-</html>
+    <!-- Navigation Options -->
+    <div class="mt-4 text-center">
+        <a class="btn btn-success me-2" asp-controller="Product" asp-action="Index">
+            <i class="fas fa-utensils"></i> View Full Menu
+        </a>
+        <a class="btn btn-info" asp-controller="Order" asp-action="ViewOrders">
+            <i class="fas fa-receipt"></i> My Orders
+        </a>
+    </div>
+</div>
