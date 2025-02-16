@@ -62,8 +62,8 @@ namespace Restoran.Data
                 new Product
                 {
                     ProductId = 1,
-                    Name = "Beef Taco",
-                    Description = "beef taco",
+                    Name = "Beef Burger",
+                    Description = "Beef Burger",
                     Price = 2.50m,
                     Stock = 100,
                     CategoryId = 2
@@ -71,8 +71,8 @@ namespace Restoran.Data
                 new Product
                 {
                     ProductId = 2,
-                    Name = "Chicken Taco",
-                    Description = "chicken taco",
+                    Name = "Chicken Burger",
+                    Description = "Chicken Burger",
                     Price = 1.99m,
                     Stock = 101,
                     CategoryId = 2
@@ -80,8 +80,8 @@ namespace Restoran.Data
                 new Product
                 {
                     ProductId = 3,
-                    Name = "Fish Taco",
-                    Description = "fish taco",
+                    Name = "Chicken Burger",
+                    Description = "Chicken Burger",
                     Price = 3.99m,
                     Stock = 90,
                     CategoryId = 2
