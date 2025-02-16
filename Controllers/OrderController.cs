@@ -26,7 +26,7 @@ namespace Restoran.Controllers
         [HttpGet]
         public async Task<IActionResult> Create()
         {
-            //ViewBag.Products = await _products.GetAllAsync();
+            ViewBag.Products = await _products.GetAllAsync();
 
             //Retrieve or create an OrderViewModel from session or other state management
             var model = HttpContext.Session.Get<OrderViewModel>("OrderViewModel") ?? new OrderViewModel

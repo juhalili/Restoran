@@ -12,7 +12,7 @@ using Restoran.Data;
 namespace Restoran.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20240807150512_AddedImageUrl")]
+    [Migration("20250202103010_AddedImageUrl")]
     partial class AddedImageUrl
     {
         /// <inheritdoc />

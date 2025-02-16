@@ -109,6 +109,26 @@ namespace Restoran.Data
                      Stock = 100,
                      CategoryId = 6,
                      ImageUrl = "/images/vegansalad.png"
+                 },
+                 new Product
+                 {
+                     ProductId = 5,
+                     Name = "Coca-Cola",
+                     Description = "Refreshing Coca-Cola!",
+                     Price = 2.50m,
+                     Stock = 100,
+                     CategoryId = 5,
+                     ImageUrl = "/images/cola.png"
+                 },
+                 new Product
+                 {
+                     ProductId = 6,
+                     Name = "Fanta",
+                     Description = "Refreshing Fanta!",
+                     Price = 2.50m,
+                     Stock = 100,
+                     CategoryId = 5,
+                     ImageUrl = "/images/fanta.png"
                  }
                 );
 
