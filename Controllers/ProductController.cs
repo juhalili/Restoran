@@ -1,6 +1,5 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.CodeAnalysis.CSharp.Syntax;
 using Restoran.Data;
 using Restoran.Models;
 
@@ -31,7 +30,7 @@ namespace Restoran.Controllers
         {
             ViewBag.Ingredients = await ingredients.GetAllAsync();
             ViewBag.Categories = await categories.GetAllAsync();
-            if(id==0)
+            if (id == 0)
             {
                 ViewBag.Operation = "Add";
                 return View(new Product());
@@ -54,7 +53,6 @@ namespace Restoran.Controllers
             ViewBag.Categories = await categories.GetAllAsync();
             if (ModelState.IsValid)
             {
-
                 if (product.ImageFile != null)
                 {
                     string uploadsFolder = Path.Combine(_webHostEnvironment.WebRootPath, "images");
@@ -69,15 +67,11 @@ namespace Restoran.Controllers
 
                 if (product.ProductId == 0)
                 {
-                   
                     product.CategoryId = catId;
-
-                    //add ingredients
                     foreach (int id in ingredientIds)
                     {
                         product.ProductIngredients?.Add(new ProductIngredient { IngredientId = id, ProductId = product.ProductId });
                     }
-
                     await products.AddAsync(product);
                     return RedirectToAction("Index", "Product");
                 }
@@ -99,7 +93,6 @@ namespace Restoran.Controllers
                     existingProduct.Stock = product.Stock;
                     existingProduct.CategoryId = catId;
 
-                    // Update product ingredients
                     existingProduct.ProductIngredients?.Clear();
                     foreach (int id in ingredientIds)
                     {

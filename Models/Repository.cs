@@ -87,5 +87,9 @@ namespace Restoran.Models
             return await query.ToListAsync();
 
         }
+        public async Task Save()
+        {
+            _context.SaveChanges();
+        }
     }
 }
