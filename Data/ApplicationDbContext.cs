@@ -43,49 +43,73 @@ namespace Restoran.Data
                new Category { CategoryId = 2, Name = "Entree" },
                new Category { CategoryId = 3, Name = "Side Dish" },
                new Category { CategoryId = 4, Name = "Dessert" },
-               new Category { CategoryId = 5, Name = "Beverage" }
+               new Category { CategoryId = 5, Name = "Beverage" },
+               new Category { CategoryId = 6, Name = "Salads" },
+               new Category { CategoryId = 7, Name = "Soups" },
+               new Category { CategoryId = 8, Name = "Specials" }
            );
 
             modelBuilder.Entity<Ingredient>().HasData(
-              
+
               new Ingredient { IngredientId = 1, Name = "Beef" },
               new Ingredient { IngredientId = 2, Name = "Chicken" },
               new Ingredient { IngredientId = 3, Name = "Fish" },
-              new Ingredient { IngredientId = 4, Name = "Tortilla" },
+              new Ingredient { IngredientId = 4, Name = "Burger bun" },
               new Ingredient { IngredientId = 5, Name = "Lettuce" },
-              new Ingredient { IngredientId = 6, Name = "Tomato" }
+              new Ingredient { IngredientId = 6, Name = "Tomato" },
+              new Ingredient { IngredientId = 7, Name = "Cheese" },
+              new Ingredient { IngredientId = 8, Name = "Onion" },
+              new Ingredient { IngredientId = 9, Name = "Mayonnaise" },
+              new Ingredient { IngredientId = 10, Name = "Spicy Sauce" },
+              new Ingredient { IngredientId = 11, Name = "Coca-Cola" },
+              new Ingredient { IngredientId = 12, Name = "Sprite" },
+              new Ingredient { IngredientId = 13, Name = "Fanta" },
+              new Ingredient { IngredientId = 14, Name = "Pepsi" }
           );
 
             modelBuilder.Entity<Product>().HasData(
 
-                
+
                 new Product
                 {
                     ProductId = 1,
                     Name = "Beef Burger",
-                    Description = "Beef Burger",
+                    Description = "Tasty Beef Burger!",
                     Price = 2.50m,
                     Stock = 100,
-                    CategoryId = 2
+                    CategoryId = 2,
+                    ImageUrl = "/images/beefburger.png"
                 },
                 new Product
                 {
                     ProductId = 2,
                     Name = "Chicken Burger",
-                    Description = "Chicken Burger",
+                    Description = "Tasty Chicken Burger!",
                     Price = 1.99m,
                     Stock = 101,
-                    CategoryId = 2
+                    CategoryId = 2,
+                    ImageUrl = "/images/chickenburger.png"
                 },
                 new Product
                 {
                     ProductId = 3,
-                    Name = "Chicken Burger",
-                    Description = "Chicken Burger",
+                    Name = "Fish Burger",
+                    Description = "Tasty Fish Burger!",
                     Price = 3.99m,
                     Stock = 90,
-                    CategoryId = 2
-                }
+                    CategoryId = 2,
+                    ImageUrl = "/images/fishburger.png"
+                },
+                 new Product
+                 {
+                     ProductId = 4,
+                     Name = "Vegan Salad",
+                     Description = "Tasty Vegan Salad!",
+                     Price = 2.50m,
+                     Stock = 100,
+                     CategoryId = 6,
+                     ImageUrl = "/images/vegansalad.png"
+                 }
                 );
 
             modelBuilder.Entity<ProductIngredient>().HasData(
@@ -100,9 +124,13 @@ namespace Restoran.Data
                 new ProductIngredient { ProductId = 3, IngredientId = 3 },
                 new ProductIngredient { ProductId = 3, IngredientId = 4 },
                 new ProductIngredient { ProductId = 3, IngredientId = 5 },
-                new ProductIngredient { ProductId = 3, IngredientId = 6 }
+                new ProductIngredient { ProductId = 3, IngredientId = 6 },
+                new ProductIngredient { ProductId = 4, IngredientId = 5 },
+                new ProductIngredient { ProductId = 4, IngredientId = 6 },
+                new ProductIngredient { ProductId = 4, IngredientId = 8 },
+                new ProductIngredient { ProductId = 4, IngredientId = 10 }
                 );
         }
-        }
-
     }
+
+}
