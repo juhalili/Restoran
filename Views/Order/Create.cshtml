@@ -2,6 +2,17 @@
 
 @{
     ViewBag.Title = "Create Order";
+
+    // Hardcoded image paths for each product ID
+    var productImages = new Dictionary<int, string>
+    {
+        { 1, "beefburger.png" }, // ProductId = 1 
+        { 2, "chickenburger.png" }, // ProductId = 2 
+        { 3, "fishburger.png" }, // ProductId = 3 
+        { 4, "vegansalad.png" }, // ProductId = 4 
+        { 5, "cola.png" }, // ProductId = 5 
+        { 6, "fanta.png" }  // ProductId = 6 
+    };
 }
 
 <div class="container mt-4">
@@ -14,8 +25,8 @@
             <div class="col-md-4 mb-4">
                 <form asp-action="AddItem" method="post">
                     <div class="card shadow-sm" style="width: 18rem;">
-                        <!-- Display Product Image -->
-                        <img src="@Url.Content("~/images/" + product?.ImageUrl)" class="card-img-top fixed-image-height" alt="@product.Description">
+                        <!-- Display Product Image based on ProductId -->
+                        <img src="@Url.Content("~/images/" + productImages.GetValueOrDefault(product.ProductId, "default-image.jpg"))" class="card-img-top fixed-image-height" alt="@product.Description">
                         <div class="card-body">
                             <h5 class="card-title text-center">@product.Name</h5>
                             <p class="card-text text-success">@product.Price.ToString("C")</p>
